@@ -40,3 +40,7 @@ footer {
   justify-content: space-between;
   color: #999999;
 }
+
+p {
+	text-align: justify;
+}
