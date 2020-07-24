@@ -1,0 +1,42 @@
+body {
+	font-size: 18px;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+	font-size: 1.4em;
+  background-color: #ebf1f9;
+  padding: 5px 5px 0px 10px;
+}
+
+h1, h2 {
+	color: #234776;
+}
+
+h3, h4 {
+	font-size: 1.2em;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  border-left: 10px solid #c4c4c4;
+}
+
+.contact {
+	text-align: right;;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  color: #999999;
+}
