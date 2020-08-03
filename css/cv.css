@@ -4,7 +4,7 @@
 }
 
 body {
-	font-size: 18px;
+  font-size: 18px;
   line-height: 1.2em;
 }
 
@@ -13,17 +13,17 @@ h1 {
 }
 
 h2 {
-	font-size: 1.3em;
+  font-size: 1.3em;
   background-color: aliceblue;
   padding: 5px 5px 0px 10px;
 }
 
 h1, h2 {
-	color: steelblue;
+  color: steelblue;
 }
 
 h3, h4 {
-	font-size: 1.2em;
+  font-size: 1.2em;
   font-weight: bold;
 }
 
@@ -39,7 +39,7 @@ li {
 }
 
 .contact {
-	text-align: right;;
+  text-align: right;;
 }
 
 footer {
