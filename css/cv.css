@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Raleway, Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.2em;
 }
@@ -25,6 +25,18 @@ body {
 }
 
 .photo img {
+  -moz-border-radius-topleft: 72px;
+-webkit-border-top-left-radius: 72px;
+ border-top-left-radius: 72px;
+-moz-border-radius-topright: 5px;
+-webkit-border-top-right-radius: 5px;
+border-top-right-radius: 5px;
+-moz-border-radius-bottomright: 47px;
+-webkit-border-bottom-right-radius: 47px;
+border-bottom-right-radius: 47px;
+-moz-border-radius-bottomleft: 27px;
+-webkit-border-bottom-left-radius: 27px;
+border-bottom-left-radius: 27px;
   width: 100%;
 }
 
@@ -65,13 +77,13 @@ p {
 
 ul {
   padding: 0;
-  list-style: none;
+  list-style-type: square;
+  list-style-position: inside; 
 }
 
 li {
   margin-bottom: 10px;
-  padding-left: 20px;
-  border-left: 10px solid #c4c4c4;
+  padding-left: 2px;
 }
 
 .contact {
@@ -82,6 +94,7 @@ footer {
   display: flex;
   justify-content: space-between;
   color: #999999;
+  margin-top: 1em;
 }
 
 .timeline-item {
@@ -117,3 +130,7 @@ footer {
           border-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0))) 1 100%;
           border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0)) 1 100%;
 }
+
+.qualification strong {
+  font-weight: bold;
+} 
