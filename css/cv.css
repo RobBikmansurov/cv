@@ -25,18 +25,9 @@ body {
 }
 
 .photo img {
-  -moz-border-radius-topleft: 72px;
--webkit-border-top-left-radius: 72px;
- border-top-left-radius: 72px;
--moz-border-radius-topright: 5px;
--webkit-border-top-right-radius: 5px;
-border-top-right-radius: 5px;
--moz-border-radius-bottomright: 47px;
--webkit-border-bottom-right-radius: 47px;
-border-bottom-right-radius: 47px;
--moz-border-radius-bottomleft: 27px;
--webkit-border-bottom-left-radius: 27px;
-border-bottom-left-radius: 27px;
+  -moz-border-radius: 72px 5px 47px 27px;
+  -webkit-border-radius: 72px 5px 47px 27px;
+  border-radius: 72px 5px 47px 27px;
   width: 100%;
 }
 
@@ -126,11 +117,10 @@ footer {
 .timeline-item:last-child {
   -webkit-border-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0))) 1 100%;
   -webkit-border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0)) 1 100%;
-       -o-border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0)) 1 100%;
-          border-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0))) 1 100%;
-          border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0)) 1 100%;
+  border-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0))) 1 100%;
+  border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0)) 1 100%;
 }
 
 .qualification strong {
   font-weight: bold;
-} 
+}
