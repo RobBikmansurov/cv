@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-  width: 800px;
+  max-width: 800px;
   margin: auto;
 }
 
@@ -123,4 +123,12 @@ footer {
 
 .qualification strong {
   font-weight: bold;
+}
+
+.photo img:hover {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 100%;
+  transition: all 0.3s ease 0s;
 }
