@@ -132,3 +132,18 @@ footer {
   width: 100%;
   transition: all 0.3s ease 0s;
 }
+
+.social {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social__item {
+  margin-left: 0.2em;
+  opacity: 0.2;
+}
+
+.social__item:hover {
+  opacity: 0.9;
+  transition: all 0.3s ease 0s;
+}
