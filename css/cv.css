@@ -147,3 +147,10 @@ footer {
   opacity: 0.9;
   transition: all 0.3s ease 0s;
 }
+
+@media print {
+  .photo img {
+    border-radius: 5px;
+    width: 100%;
+  }
+}
