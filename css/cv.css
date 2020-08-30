@@ -176,4 +176,7 @@ footer {
     border-radius: 5px;
     width: 100%;
   }
+  .social__item img {
+    display: none;
+  }
 }
