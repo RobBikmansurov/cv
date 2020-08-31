@@ -16,7 +16,7 @@ jobs:
           echo "${{ secrets.PRIVATE_KEY }}" > "$HOME/.ssh/key"
           chmod 600 "$HOME/.ssh/key"
           rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" \
-            --archive --compress \
+            --archive --compress --omit-dir-times \
             --exclude /deploy_key \
             --exclude /.git/ \
             --exclude /.github/ \
