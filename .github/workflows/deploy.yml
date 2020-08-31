@@ -1,4 +1,4 @@
-name: Deploy
+name: Deployment
 
 on:
   push:
@@ -9,11 +9,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      # Setup key
-      - run: set -eu
-      - run: mkdir "$HOME/.ssh"
-      - run: echo "${{ secrets.PRIVATE_KEY }}" > "$HOME/.ssh/key"
-      - run: chmod 600 "$HOME/.ssh/key"
-      # Deploy
-      - run: rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress . deploy@cv.bikmansurov.ru:/var/www/html/bikmansurov/cv/
+      - name: Rsync
+        run: |
+          set -eu
+          mkdir "$HOME/.ssh"
+          echo "${{ secrets.PRIVATE_KEY }}" > "$HOME/.ssh/key"
+          chmod 600 "$HOME/.ssh/key"
+          rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" \
+            --archive --compress \
+            --exclude /deploy_key \
+            --exclude /.git/ \
+            --exclude /.github/ \
+            --exclude /node_modules/ \
+            ./ deploy@cv.bikmansurov.ru:/var/www/html/bikmansurov/cv/
