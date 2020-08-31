@@ -3,4 +3,4 @@ curriculum vitae
 
 https://robbikmansurov.github.io/cv/
 
-http://bikmansurov.ru
+https://cv.bikmansurov.ru
