@@ -17,7 +17,7 @@ jobs:
           CHAT: ${{ secrets.TELEGRAM_TO }}
           TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
         run: |
-          curl -s -X POST https://api.telegram.org/bot$TOKEN/sendMessage?chat_id=$CHAT -F text="$GITHUB_ACTOR on branch $GITHUB_REF"
+          curl -s -X POST https://api.telegram.org/bot$TOKEN/sendMessage?chat_id=$CHAT -F text="$GITHUB_ACTOR pushed on a branch $GITHUB_REF"
 
       - name: Rsync
         run: |
