@@ -16,7 +16,7 @@ jobs:
         env:
           CHAT: ${{ secrets.TELEGRAM_TO }}
           TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-          SHA7: ${GITHUB_SHA:7}
+          SHA7: ${GITHUB_SHA::7}
         run: |
           curl -s -X POST https://api.telegram.org/bot$TOKEN/sendMessage?chat_id=$CHAT -F text="$GITHUB_ACTOR pushed $SHA7 on a branch $GITHUB_REF $GITHUB_BASE_REF $GITHUB_HEAD_REF"
 
