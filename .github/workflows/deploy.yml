@@ -19,7 +19,8 @@ jobs:
         run: |
           SHA=`git rev-parse --short HEAD`
           REF=`git rev-parse --abbrev-ref HEAD`
-          curl -s -X POST https://api.telegram.org/bot$TOKEN/sendMessage?chat_id=$CHAT -F text="$GITHUB_ACTOR pushed *$SHA* on a branch *$REF* $GITHUB_BASE_REF $GITHUB_HEAD_REF" -F parse_mode='markdown'
+          TEXT="$GITHUB_ACTOR pushed `SHA` on a branch `$REF`"
+          curl -s -X POST https://api.telegram.org/bot$TOKEN/sendMessage?chat_id=$CHAT -F text="$TEXT" -F parse_mode='markdown'
 
       - name: Rsync
         run: |
